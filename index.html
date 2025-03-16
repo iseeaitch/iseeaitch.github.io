@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <title>Get your BlueSky @handle</title>
 
     <!-- Pretendard 폰트 추가 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
@@ -19,21 +19,21 @@
     <style>
         /* 기본 스타일 */
         body {
-            font-family: 'Roboto Mono', 'Pretendard', sans-serif; /* Roboto Mono가 없으면 Pretendard로 대체 */
+            font-family: 'Roboto Mono', 'Pretendard', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* 화면을 꽉 채움 */
+            height: 100vh;
             margin: 0;
             transition: background-color 0.3s, color 0.3s;
-            overflow: hidden; /* 스크롤 방지 */
+            overflow: hidden;
         }
 
         /* 콘텐츠 박스 스타일 */
         .coming-soon-box {
             text-align: center;
             padding: 40px;
-            border-radius: 30px; /* 모서리 더 둥글게 */
+            border-radius: 30px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
             background-color: #fff;
             max-width: 600px;
@@ -46,29 +46,30 @@
         h1 {
             font-weight: 700;
             font-size: 3rem;
-            color: #ff6347; /* 주황색 */
+            color: #1da1f2; /* BlueSky의 블루 */
             margin-bottom: 20px;
+            cursor: pointer;
         }
         p {
             font-size: 1.2rem;
-            color: #888; /* 회색 */
+            color: #888;
             margin-bottom: 10px;
         }
         .link-container {
             display: flex;
-            flex-direction: column; /* 텍스트와 링크가 세로로 배치되도록 */
+            flex-direction: column;
             align-items: center;
             gap: 10px;
         }
         a {
-            color: #ff6347; /* 주황색 */
+            color: #1da1f2;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s;
-            border-bottom: 2px dotted #ff6347; /* 동그란 점선 밑줄 */
+            border-bottom: 2px dotted #1da1f2;
+            transition: opacity 0.3s;
         }
         a:hover {
-            color: #ffffff;
+            opacity: 0.7;
         }
         /* 다크 모드 */
         @media (prefers-color-scheme: dark) {
@@ -81,17 +82,14 @@
                 box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
             }
             h1 {
-                color: #b0e0e6; /* 블루 색상 */
+                color: #1da1f2;
             }
             p {
                 color: #888;
             }
             a {
-                color: #b0e0e6;
-                border-bottom: 2px dotted #b0e0e6; /* 동그란 점선 밑줄 */
-            }
-            a:hover {
-                color: #ffffff;
+                color: #1da1f2;
+                border-bottom: 2px dotted #1da1f2;
             }
         }
         /* 라이트 모드 */
@@ -105,17 +103,14 @@
                 box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
             }
             h1 {
-                color: #ff6347; /* 주황색 */
+                color: #1da1f2;
             }
             p {
                 color: #888;
             }
             a {
-                color: #ff6347;
-                border-bottom: 2px dotted #ff6347; /* 동그란 점선 밑줄 */
-            }
-            a:hover {
-                color: #ffffff;
+                color: #1da1f2;
+                border-bottom: 2px dotted #1da1f2;
             }
         }
         /* 반응형 디자인 (모바일 대응) */
@@ -132,11 +127,17 @@
             }
         }
     </style>
+    <script>
+        function redirectToBlueSky() {
+            window.location.href = "https://bsky.app/";
+        }
+    </script>
 </head>
 <body>
     <div class="coming-soon-box">
-        <h1>Coming soon</h1>
-        <p><a href="https://docs.google.com/spreadsheets/d/1_TFqzgd7CuIyqkFnlnwpYfQZGHZlj_ts0Gd_wAUORSQ/edit?usp=sharing" target="_blank">Google Docs로 이동</a>하여 더 많은 정보를 확인할 수 있습니다.</p>
+        <h1 onclick="redirectToBlueSky()">Get your BlueSky @handle</h1>
+        <p><a href="mailto:iseeaitch@gmail.com">iseeaitch@gmail.com</a></p>
+        <p>contact here to get @your_username.spelunky.info handle on BlueSky</p>
     </div>
 </body>
 </html>
